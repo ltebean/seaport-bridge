@@ -1,0 +1,23 @@
+{
+  "name": "seaport-bridge",
+  "version": "0.1.0",
+  "description": "Seaport UIWebView javascript bridge",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ltebean/Seaport.git"
+  },
+  "keywords": [
+    "seaport",
+    "webview",
+    "bridge"
+  ],
+  "author": "ltebean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ltebean/seaport-bridge/issues"
+  },
+  "homepage": "https://github.com/ltebean/seaport-bridge"
+}
