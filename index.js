@@ -5,7 +5,7 @@
 }('seaport-bridge', function() {
 
   return {
-    connect: function(cb) {
+    connect: function(dataHandler, cb) {
 
       function connectWebViewJavascriptBridge(cb) {
         if (window.WebViewJavascriptBridge) {
@@ -17,7 +17,9 @@
         }
       }
       connectWebViewJavascriptBridge(function(bridge) {
-        bridge.init(function(message, responseCallback) {});
+        bridge.init(function(message, responseCallback) {
+          dataHandler(message);
+        });
         cb(seaportBridge(bridge));
       })
     }
@@ -61,7 +63,7 @@
   function data(bridge) {
     return {
       send: function(data) {
-        bridge.callHandler('data:send', data);
+        bridge.send(data);
       }
     }
   }
