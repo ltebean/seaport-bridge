@@ -30,7 +30,8 @@
       userDefaults: userDefaults(bridge),
       http: http(bridge),
       param: param(bridge),
-      data: data(bridge)
+      data: data(bridge),
+      url: url(bridge)
     }
   }
 
@@ -75,6 +76,14 @@
       },
       post: function(request, cb) {
         bridge.callHandler('http:post', request, cb);
+      }
+    }
+  }
+
+  function url(bridge) {
+    return {
+      open: function(url, cb) {
+        bridge.callHandler('url:open', url, cb);
       }
     }
   }
